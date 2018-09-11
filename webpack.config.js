@@ -38,6 +38,16 @@ module.exports = {
                 }
             },
             {
+                test: /\.(jpg|png)$/,
+                use: {
+                    loader: "url-loader",
+                    options: {
+                        limit: 15000,
+                        name: "[name].[ext]"
+                    },
+                },
+            },
+            {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,

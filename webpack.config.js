@@ -9,5 +9,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'doStart'
         })
-    ]
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
+    }
 };

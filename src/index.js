@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import './css/main.css';
 
 const startNode = document.createElement('h1');

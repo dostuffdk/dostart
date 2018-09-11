@@ -9,9 +9,11 @@
     "start": "webpack-dev-server --mode development"
   },
   "author": "Anders Mogensen <anders@dostuff.dk>",
+  "browserslist": "> 1%, not dead",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",

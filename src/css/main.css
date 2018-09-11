@@ -1,4 +1,23 @@
 body {
     background-color: papayawhip;
     color: hotpink;
+    font-family: system-ui;
+}
+
+.something {
+    color: blue;
+
+    &\__prop {
+        color: red;
+    }
+
+    &\--modifier {
+        color: purple;
+    }
+
+    &\__prop {
+        &\--other-modifier {
+            color: green;
+        }
+    }
 }

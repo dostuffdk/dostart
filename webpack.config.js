@@ -8,7 +8,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'doStart'
+            title: 'doStart',
+            template: 'src/template.html'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'

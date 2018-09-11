@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PostCssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
     devServer: {
@@ -21,10 +22,21 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
                     {
-                        loader: 'postcss-loader',options: {
-                            plugins: () => ([])
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            ident: 'postcss',
+                            plugins: () => [
+                                PostCssPresetEnv({
+                                    stage: 0
+                                })
+                            ]
                         }
                     }
                 ]

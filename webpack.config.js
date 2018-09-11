@@ -3,6 +3,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PostCssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
+    output: {
+        filename: '[name].[chunkhash].js'
+    },
     devServer: {
         stats: 'minimal',
         host: process.env.HOST, // use 0.0.0.0 to make it available on network
@@ -14,7 +17,7 @@ module.exports = {
             template: 'src/template.html'
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css'
+            filename: '[name].[contenthash].css'
         })
     ],
     module: {

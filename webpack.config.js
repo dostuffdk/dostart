@@ -4,6 +4,7 @@ const PostCssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
     devServer: {
+        stats: 'minimal',
         host: process.env.HOST, // use 0.0.0.0 to make it available on network
         port: process.env.PORT,
     },
